@@ -6,8 +6,8 @@ permissions:
 on:
   create:
   push:
-  schedule: # execute every 24 hours
-    - cron: "0 1 * * 1,4"
+  schedule: # execute twice monthly
+    - cron: "0 1 */14 * *"
   workflow_dispatch:
 
 jobs:
