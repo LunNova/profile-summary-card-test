@@ -1,0 +1,16 @@
+name: Metrics
+permissions:
+  contents: write
+on:
+  # Schedule daily updates
+  schedule: # execute twice monthly
+    - cron: "0 1 */14 * *"
+  # (optional) Run workflow manually
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
