@@ -4,8 +4,6 @@ permissions:
   contents: write
 
 on:
-  create:
-  push:
   schedule: # execute twice monthly
     - cron: "0 1 */14 * *"
   workflow_dispatch:
